@@ -46,6 +46,16 @@
             </ul>
         </li>
 
+        <li>
+            <a href="{{ route('student-applications.list') }}" class="side-menu {{ request()->routeIs('students-applications.*') ? 'side-menu--active': ''}}">
+                <div class="side-menu__icon"> <i data-lucide="home"></i> </div>
+                <div class="side-menu__title">
+                    Student Applications
+                    <div class="side-menu__sub-icon transform rotate-180"></div>
+                </div>
+            </a>
+        </li>
+
 
 
         <li>

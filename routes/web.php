@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\{ExamController, QuestionsController, UserController};
+use App\Http\Controllers\{ExamController, QuestionsController,
+    UserController, StudentApplicationController};
 
 /*
 |--------------------------------------------------------------------------
@@ -61,4 +62,9 @@ Route::middleware([
     Route::get('user/create', [UserController::class, 'create'])->name('user.create');
     Route::get('user/edit/{id}', [UserController::class, 'edit'])->name('user.edit');
     Route::delete('users/delete/{id}', [UserController::class, 'delete'])->name('user.delete');
+
+
+    /*applications*/
+    Route::get('/student-applications', [StudentApplicationController::class, 'index'])->name('student-applications.list');
+    Route::get('/student-application/{id}', [StudentApplicationController::class, 'show'])->name('student-applications.show');
 });
