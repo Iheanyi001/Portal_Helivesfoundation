@@ -37,13 +37,13 @@ return [
         'smtp' => [
             //'url' => env('MAIL_URL'),
             'transport' => 'smtp',
-            'host' => env('APP_ENV') === 'local' ? 'smtp.mailtrap.io' : 'helivesfoundation.org',
-            'port'  => env('APP_ENV') === 'local' ? 2525 : 465,
+            'host' => 'helivesempowermentfoundation.org',
+            'port'  => 465,
             'encryption' => env('MAIL_ENCRYPTION', 'tls'),
-            'username'  => env('APP_ENV') === 'local' ? '1e579ace62f53a' : 'info@helivesfoundation.org',
-            'password'  => env('APP_ENV') === 'local' ? '7d08b1fa393be7' : 'Helivesfoundation_info_wolsoel_o2_227',
+            'username'  => 'info@helivesempowermentfoundation.org',
+            'password'  => 'Helivesfoundation_info_wolsoel_o2_227',
             'timeout' => null,
-            //'local_domain' => env('MAIL_EHLO_DOMAIN'),
+            'local_domain' => env('MAIL_EHLO_DOMAIN',parse_url(env('APP_URL'))['host']),
         ],
 
         'ses' => [
@@ -100,8 +100,8 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'hello@example.com'),
-        'name' => env('MAIL_FROM_NAME', 'Example'),
+        'address' => env('MAIL_FROM_ADDRESS', 'info@helivesempowermentfoundation.org'),
+        'name' => env('MAIL_FROM_NAME', 'Helivesempowermentfoundation'),
     ],
 
     /*
