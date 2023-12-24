@@ -35,15 +35,15 @@ return [
 
     'mailers' => [
         'smtp' => [
+            //'url' => env('MAIL_URL'),
             'transport' => 'smtp',
-            'url' => env('MAIL_URL'),
-            'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
-            'port' => env('MAIL_PORT', 587),
+            'host' => env('APP_ENV') === 'local' ? 'smtp.mailtrap.io' : 'Helivesfoundation.org',
+            'port'  => env('APP_ENV') === 'local' ? 2525 : 465,
             'encryption' => env('MAIL_ENCRYPTION', 'tls'),
-            'username' => env('MAIL_USERNAME'),
-            'password' => env('MAIL_PASSWORD'),
+            'username'  => env('APP_ENV') === 'local' ? '1e579ace62f53a' : 'info@helivesfoundation.org',
+            'password'  => env('APP_ENV') === 'local' ? '7d08b1fa393be7' : 'Helivesfoundation_info_wolsoel_o2_227',
             'timeout' => null,
-            'local_domain' => env('MAIL_EHLO_DOMAIN'),
+            //'local_domain' => env('MAIL_EHLO_DOMAIN'),
         ],
 
         'ses' => [
