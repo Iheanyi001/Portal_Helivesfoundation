@@ -37,7 +37,7 @@ return [
         'smtp' => [
             //'url' => env('MAIL_URL'),
             'transport' => 'smtp',
-            'host' => env('APP_ENV') === 'local' ? 'smtp.mailtrap.io' : 'Helivesfoundation.org',
+            'host' => env('APP_ENV') === 'local' ? 'smtp.mailtrap.io' : 'helivesfoundation.org',
             'port'  => env('APP_ENV') === 'local' ? 2525 : 465,
             'encryption' => env('MAIL_ENCRYPTION', 'tls'),
             'username'  => env('APP_ENV') === 'local' ? '1e579ace62f53a' : 'info@helivesfoundation.org',
