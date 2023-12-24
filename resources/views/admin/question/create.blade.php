@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-top-nav>
         <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Application</a></li>
-        <li class="breadcrumb-item"><a href="{{ route('exam.question.list') }}">Question</a></li>
+
         <li class="breadcrumb-item active" aria-current="page">Create</li>
     </x-top-nav>
 
